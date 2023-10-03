@@ -4,14 +4,18 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Home() {
-  let defaultItems = [];
+  let defaultItems = [
+    { name: "Bread", done: false },
+    { name: "Milk", done: false },
+  ];
+
   if (typeof window !== "undefined") {
-    defaultItems = JSON.parse(localStorage.getItem("items") || "[]");
+    const savedItemString = localStorage.getItem("items");
+    if (savedItemString) defaultItems = JSON.parse(savedItemString);
   }
 
   const [items, setItems] = useState(defaultItems);
   const saveItems = () => {
-    console.log("saving");
     localStorage.setItem("items", JSON.stringify(items));
   };
 
