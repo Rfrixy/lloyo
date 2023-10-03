@@ -15,13 +15,6 @@ export default function Home() {
     localStorage.setItem("items", JSON.stringify(items));
   };
 
-  // useEffect(() => {
-  //   const items = localStorage.getItem("items");
-  //   if (items) {
-  //     setItems(JSON.parse(items));
-  //   }
-  // }, []);
-
   useEffect(() => {
     saveItems();
   }, [items]);
@@ -67,7 +60,7 @@ export default function Home() {
         </div>
 
         {/* loop through items to generate elements */}
-        {items.map((item, i) => (
+        {items.map((item: any, i: number) => (
           <div
             key={item.name}
             className={cs(
