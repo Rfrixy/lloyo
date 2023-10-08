@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="min-h-screen min-w-screen animated">
       <div>
-        <div className="p-3 bg-indigo-50 w-full border-b-4">
+        <div className="p-3 bg-gray-800 w-full border-b-4 border-indigo-900">
           <form
             className="text-center"
             onSubmit={(e) => {
@@ -52,10 +52,10 @@ export default function Home() {
                 e.preventDefault();
                 console.log(e);
               }}
-              className="outline-none w-1/2  p-1 center rounded-md border-2 border-indigo-200"
+              className="outline-none w-1/2  p-1 px-3 center rounded-full border-2 border-black-200 bg-gray-400"
             ></input>
             <button
-              className="bg-indigo-200 p-1 rounded-md border-2 border-indigo-200 color-indigo-800 text-white ml-2"
+              className="bg-gray-900 p-1 px-3 rounded-md border-2 border-gray-300 color-indigo-800 text-white ml-2"
               type="submit"
             >
               Add
