@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="min-h-screen min-w-screen animated">
       <div>
-        <div className="p-3 bg-gray-800 w-full border-b-4 border-indigo-900">
+        <div className="p-3 bg-gray-800 w-full border-b-2 border-white">
           <form
             className="text-center"
             onSubmit={(e) => {
@@ -63,6 +63,15 @@ export default function Home() {
           </form>
         </div>
 
+        <div>
+          <div className="flex justify-center align-center bg-[#4C5D7E] border-b-4 boder-white">
+            <div className="text-center px-3 py-2 my-2 text-white">Events</div>
+            <div className="text-center px-3 py-2 my-2 text-white bg-indigo-950 rounded-full">
+              Grocery
+            </div>
+            <div className="text-center px-3 py-2 my-2 text-white">Tasks</div>
+          </div>
+        </div>
         {/* loop through items to generate elements */}
         {items.map((item: any, i: number) => (
           <div
